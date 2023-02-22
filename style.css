@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color : white;
+  --bg-url : url(./assets/bg_bobile.jpg);
+  --stroke-color : rgba(255, 255, 255, 0.5);
+  --surface-color : rgba(255, 255, 255, 0.1);
+  --surface-color-hover : rgba(255, 255, 255, 0.05);
+  --highlight-color : rgba(255, 255, 255, 0.2);
+  --fundo-botao : url(./noite.svg);
+  --posicao-botao : 0px;
+
+
+}
+
+.claro {
+  --text-color : black;
+  --bg-url : url(./assets/bg_bobile-claro.jpg);
+  --stroke-color : rgba(0, 0, 0, 0.5);
+  --surface-color : rgba(0, 0, 0, 0.05);
+  --surface-color-hover : rgba(0, 0, 0, 0.5);
+  --highlight-color : rgba(0, 0, 0, 0.1);
+  --fundo-botao : url(./dia.svg);
+  --posicao-botao : 32px;
+}
+
+#swith {
+  display: flex;
+  margin: 14px auto;
+  align-items: center;
+  width: 64px;
+  position: relative;
+}
+
+#swith button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: none;
+  background: white var(--fundo-botao) no-repeat center;
+  position: absolute;
+  left: var(--posicao-botao);
+  z-index: 1;
+  
+}
+
+
+
+#swith span {
+  width: 64px;
+  height: 24px;
+  border-radius: 100px;
+  display: block;
+  background-color: var(--surface-color);
+  border: 1px  solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+}
+
+
+body {
+  background: var(--bg-url) no-repeat top center / cover;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  /* border: 1px solid red; */
+  width: 360px;
+  padding: 0 24px;
+  margin: 40px auto 0; /* se for display block da pra usar o margin auto pra centralizar */
+}
+
+#profile{
+  text-align: center;
+  padding: 24px;
+
+}
+
+#profile img{
+  width: 112px;
+}
+#profile p{
+  font-weight: 500;
+  line-height: 24px;
+}
+/* PODERIA SER ASSIM PARA CENTRALIZAR A IMAGEM
+#profile img{
+  width: 112px;
+  display: block;
+  margin: auto;
+} */
+
+/* LINKS */
+
+ul {
+  /* border: 1px red solid; */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+
+}
+
+li a{
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(5px);
+  transition: background 0.3s;
+}
+/* poderia ser assim:
+li{
+  text-align: center;
+  padding: 16px 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+} */
+
+li a:hover {
+  background-color: var(--surface-color-hover);
+  border: 1px solid var(--stroke-color);
+}
+
+#social-links {
+  display: flex;
+  padding: 24px;
+  font-size: 30px;
+  gap: 20px;
+  justify-content: center;
+}
+
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+#social-links a:hover {
+  background-color: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  list-style: none;
+}
