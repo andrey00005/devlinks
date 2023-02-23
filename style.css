@@ -26,6 +26,7 @@
   --highlight-color : rgba(0, 0, 0, 0.1);
   --fundo-botao : url(./dia.svg);
   --posicao-botao : 32px;
+  transition: 0.5s;
 }
 
 #swith {
