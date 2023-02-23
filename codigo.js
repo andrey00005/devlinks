@@ -5,8 +5,8 @@ function toggle () {
   let img = document.querySelector('#profile img')
 
   if ( mode.classList.contains('claro')) {
-    img.setAttribute('src', './assets/Avatar2.png')
+    img.setAttribute('src', './assets/avatar02.png')
   } else {
-    img.setAttribute('src', './assets/Avatar.png')
+    img.setAttribute('src', './assets/avatar01.png')
   }
 }
