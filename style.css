@@ -182,8 +182,13 @@ footer {
     --highlight-color : rgba(255, 255, 255, 0.2);
     --fundo-botao : url(./noite.svg);
     --posicao-botao : 0px;
+    
   
-  
+  }
+
+  .claro {
+    --text-color : black;
+    --bg-url : url(./assets/Interface=Desktop\,\ Theme=Light\ mode.jpg);
   }
 }
 
