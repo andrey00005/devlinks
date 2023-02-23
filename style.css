@@ -73,7 +73,8 @@ body * {
 
 #container {
   /* border: 1px solid red; */
-  width: 360px;
+  width: 100%;
+  max-width: 520px;
   padding: 0 24px;
   margin: 40px auto 0; /* se for display block da pra usar o margin auto pra centralizar */
 }
