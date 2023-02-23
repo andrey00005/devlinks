@@ -29,6 +29,10 @@
   transition: 0.5s;
 }
 
+.claro #swith button {
+  animation: slider .5s forwards;
+}
+
 #swith {
   display: flex;
   margin: 14px auto;
@@ -44,12 +48,16 @@
   border: none;
   background: white var(--fundo-botao) no-repeat center;
   position: absolute;
-  left: var(--posicao-botao);
   z-index: 1;
-  
+  left: 0;
+  animation: slider-off .5s;
+  cursor: pointer;
+
 }
 
-
+#swith button:hover {
+  outline: 8px solid var(--highlight-color);
+}
 
 #swith span {
   width: 64px;
@@ -64,6 +72,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
 }
 
 body * {
@@ -138,7 +147,7 @@ li a:hover {
 
 #social-links {
   display: flex;
-  padding: 24px;
+  padding: 12px;
   font-size: 30px;
   gap: 20px;
   justify-content: center;
@@ -148,7 +157,7 @@ li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 16px;
+  padding: 16px 16px;
   border-radius: 50%;
   transition: background 0.3s;
 }
@@ -161,4 +170,38 @@ footer {
   padding: 24px 0;
   text-align: center;
   list-style: none;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --text-color : white;
+    --bg-url : url(./assets/Interface=Desktop\,\ Theme=Dark\ mode.jpg);
+    --stroke-color : rgba(255, 255, 255, 0.5);
+    --surface-color : rgba(255, 255, 255, 0.1);
+    --surface-color-hover : rgba(255, 255, 255, 0.05);
+    --highlight-color : rgba(255, 255, 255, 0.2);
+    --fundo-botao : url(./noite.svg);
+    --posicao-botao : 0px;
+  
+  
+  }
+}
+
+@keyframes slider {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+@keyframes slider-off {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+  }
 }
